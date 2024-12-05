@@ -1,26 +1,22 @@
-function checkspeed() [
-    const speed =parseFloat(prompt("enter the car's speed:"));
-
-    if(isNaN(speed)|| speed <0){
-        console.log("invalid input.please enter a valid speed.");
-        return;
+function checkspeed(speed){
+    if(speed===80){
+        console.log('${speed} points:2');
+    }else if(speed <= 70){
+        console.log('${speed} ok');
+    }else {
+        (speed>70)
+        console.log("1 demerit point");
+        console.log("12 demerit points");
+    }
+    }
+    function carpoints(points){
+        if(points>=12){
+            console.log('${points} "license has been suspended"');
 
     }
-const speedlimit = 70;
-const kmperdemerit =5;
+    }
 
-if (speed <= speedlimit) {
-    console.log("ok");
-    return;
-}
-const demeritpoints = math.floor((speed -speedlimit) /kmperDemerit);
-if (demeritpoints >12) {
-    console.log("license suspended");
-} else{
-    console.log('points: ${demeritpoints}');
 
-}
-}
+
 checkspeed();
 
-}
